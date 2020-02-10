@@ -1,0 +1,13 @@
+<h1>Results</h1>
+
+<div class = results>
+  <% if @include == false %>
+    <%= "Sorry but #{@guess} can be built out of #{@letters}" %>
+    <% elsif @english_word == false %>
+        <%= "Sorry but #{@guess} does not seem to be a valid English word..." %>
+     <% elsif @include && @english_word %>
+        <%= "Congratulations! #{@guess} is a valid English word!" %>
+  <% end %>
+</div>
+
+<%= link_to "Play again", "new_path" %>
